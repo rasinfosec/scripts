@@ -30,7 +30,7 @@ def work(file_in, file_out, ip_column, mask_column, new_column):
 def main():
     parser.add_argument("-f", "--file", dest = "file", help="I need a valid xlsx file.")
     parser.add_argument("-ic", "--ip_column", dest = "ip_column", default = 1, help="What column is the IP located?  Default is column 1.")
-    parser.add_argument("-mc", "--mask_column", dest = "mask_column", default = 2, help="What column is the IP located?  Default is column 2.")
+    parser.add_argument("-mc", "--mask_column", dest = "mask_column", default = 2, help="What column is the netmask located?  Default is column 2.")
     parser.add_argument("-n", "--new_column", dest = "new_column", default = 3, help="What column should the new data be written?.  Default is column 3.")
     args = parser.parse_args()
     file = args.file
