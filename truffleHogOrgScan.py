@@ -17,5 +17,5 @@ for repo in data:
     gitLoc = (repo["html_url"])
     saveFile = re.sub('[^A-Za-z0-9]+', '', gitLoc.strip('https://github.com/' + comp + '/'))
     print ("Scanning {}.git and saving json file to {}.json".format(gitLoc, saveFile))
-    cmd = "trufflehog --regex --entropy=True --json {}.git >> {}.json".format(gitLoc, saveFile)
+    cmd = "trufflehog3 -o {}.json -f json {}.git".format(saveFile, gitLoc)
     os.system(cmd)
