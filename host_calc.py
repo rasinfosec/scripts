@@ -1,3 +1,4 @@
+# to calculate hosts between two IP addresses like 10.0.1.30-10.0.1.120
 from ipaddress import ip_address
 
 def listHosts(start, end):
